@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Image Classifier (90 Classes)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header & Server Status -->
+        <header class="header">
+            <div>
+                <h1>🐾 Animal Image Classifier</h1>
+                <p class="subtitle">MobileNetV2 Transfer Learning • 90 Animal Species</p>
+            </div>
+            <div class="status-box">
+                <span id="status-dot" class="dot offline"></span>
+                <span id="status-text">Checking API...</span>
+            </div>
+        </header>
+
+        <!-- Main Workspace -->
+        <main class="grid">
+            <!-- Left Column: Image Upload -->
+            <section class="card">
+                <h2>1. Upload Animal Photo</h2>
+                
+                <div id="drop-zone" class="drop-zone">
+                    <input type="file" id="file-input" accept="image/jpeg, image/png, image/bmp, image/webp" hidden>
+                    <div id="upload-prompt" class="upload-prompt">
+                        <div class="upload-icon">📁</div>
+                        <p><strong>Click to browse</strong> or drag & drop an image here</p>
+                        <span class="hint">Supports JPEG, PNG, BMP, WEBP (Resized to 224×224)</span>
+                    </div>
+                    <img id="image-preview" class="image-preview hidden" alt="Uploaded Animal Preview">
+                </div>
+
+                <div class="file-info hidden" id="file-info">
+                    <span id="file-name">filename.jpg</span>
+                    <button id="clear-btn" class="btn-secondary">Remove</button>
+                </div>
+
+                <button id="predict-btn" class="btn-primary" disabled>
+                    Predict Animal
+                </button>
+
+                <div id="error-box" class="error-box hidden"></div>
+            </section>
+
+            <!-- Right Column: Prediction Results -->
+            <section class="card">
+                <h2>2. Prediction Results</h2>
+
+                <!-- Empty State -->
+                <div id="empty-result" class="empty-result">
+                    <p>Upload an animal photo and click <strong>Predict Animal</strong> to see the top-3 predictions and confidence scores.</p>
+                </div>
+
+                <!-- Loading Spinner -->
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Running CNN inference on (1, 224, 224, 3) tensor...</p>
+                </div>
+
+                <!-- Results Container -->
+                <div id="result-box" class="result-box hidden">
+                    <div class="top-prediction">
+                        <span class="badge">Top Match</span>
+                        <h3 id="top-class">Tiger</h3>
+                        <p class="top-confidence">Confidence: <strong id="top-conf">98.45%</strong></p>
+                    </div>
+
+                    <div class="top3-section">
+                        <h4>Top 3 Probabilities</h4>
+                        <div id="top3-list" class="top3-list">
+                            <!-- Dynamically populated by script.js -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
