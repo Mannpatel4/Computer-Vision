@@ -29,7 +29,6 @@ animals/
 *.zip
 *.tar.gz
 *.rar
-*.keras
 *.h5
 *.hdf5
 *.pth
@@ -52,3 +51,4 @@ kaggle.json
 *.swp
 .DS_Store
 Thumbs.db
+!model/PreTrainAnimalPrediction.keras
