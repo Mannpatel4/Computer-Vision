@@ -1,5 +1,5 @@
 // Change this if your FastAPI runs on a different port
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://computer-vision-2hmd.onrender.com";
 
 // DOM Elements
 const statusDot = document.getElementById("status-dot");
