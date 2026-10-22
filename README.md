@@ -1,3 +1,9 @@
+## 🌐 Live Links
+
+- **Live Demo:** [Try the Animal Classifier](https://animal-classifier-frontend.onrender.com)
+- **Backend API:** [Check API Status](https://computer-vision-2hmd.onrender.com)
+- **API Documentation:** [Explore Swagger UI](https://computer-vision-2hmd.onrender.com/docs)
+
 # 🐾 Animal Image Classifier (90 Species)
 
 An end-to-end Deep Learning web application that classifies images of **90 different animal species**. The model is built using **TensorFlow/Keras** with **MobileNetV2 Transfer Learning**, served via a high-performance **FastAPI** backend, and paired with a responsive **HTML, CSS, and JavaScript** frontend.
