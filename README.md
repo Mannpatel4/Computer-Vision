@@ -53,3 +53,7 @@ animal-classifier/
 * **Deep Learning:** TensorFlow, Keras, NumPy, Pillow (PIL)
 * **Backend API:** FastAPI, Uvicorn
 * **Frontend:** HTML5, CSS3, Vanilla JavaScript (`fetch` API)
+
+## 📌 Notes
+
+* The free Render tier may "sleep" after inactivity, so the first request can take 30–60 seconds to wake the backend.
